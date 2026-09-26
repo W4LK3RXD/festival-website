@@ -6,7 +6,7 @@
    Case Problem 2
    
    Design Styles for the Chupacabra Music Fest
-   Author: Gerald Velasco
+   Author: 43
    Date:   09/23/2026
    
    Filename: cf_effects.css
@@ -99,4 +99,37 @@ div#cube_top {
 
 div#cube_bottom {
    transform: translateY(200px) rotateX(90deg);
+}
+
+#cube_bottom h1 {
+   animation: pulse 2s infinite, colors 4s linear infinite;
+}
+
+@keyframes pulse {
+   0% { transform: scale(0.9); }
+   50% { transform: scale(1); }
+   100% { transform: scale(0.9); }
+}
+
+@keyframes colors {
+   0% { color: rgb(0, 21, 255); }
+   33% { color: rgb(157, 0, 255); }
+   66% { color: rgb(255, 255, 255); }
+   100% { color: rgb(0, 21, 255); }
+}
+
+#cube_top p {
+animation: festivalGlow 1s infinite alternate;
+}
+
+@keyframes festivalGlow {
+   from {
+      text-shadow: 0 0 5px rgb(0, 242, 255);
+   }
+   to {
+      text-shadow:
+      0 0 10px rgb(0, 242, 255),
+      0 0 20px rgb(195, 0, 255),
+      0 0 40px rgb(195, 0, 255);
+   }
 }
